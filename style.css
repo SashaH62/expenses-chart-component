@@ -1,0 +1,142 @@
+/* Universal Styling */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --background: hsl(27, 66%, 92%);
+  --primary: hsl(10, 79%, 65%);
+  --secondary: hsl(186, 34%, 60%);
+}
+
+body {
+  background: var(--background);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: "DM Sans";
+}
+
+/* Class */
+
+/* Main card */
+
+.main-card {
+  width: calc(100% - 50px);
+  max-width: 600px;
+}
+
+.upper,
+.lower {
+  border-radius: 15px;
+  padding: 40px;
+}
+
+/* Upper Card */
+
+.upper {
+  background-color: var(--primary);
+  margin-bottom: 25px;
+  color: #fff;
+}
+
+.upper .sub-titles {
+  color: var(--background);
+  margin-bottom: 5px;
+}
+
+.upper h3 {
+  font-size: 30px;
+  font-weight: 700;
+}
+
+/* Lower Card */
+
+.lower {
+  background-color: #fff;
+}
+
+.title {
+  font-weight: 700;
+  font-size: 32px;
+  margin-bottom: 25px;
+}
+
+.graph {
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
+
+.graph-bar-section {
+  width: 15%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.cost-display {
+  text-align: center;
+  width: calc(100% - 5px);
+  padding: 7.25px;
+  color: #fff;
+  background-color: hsl(25, 47%, 15%);
+  margin-bottom: 10px;
+  border-radius: 5px;
+  opacity: 0;
+  transition: 0.2s all ease-in-out;
+}
+
+.bar-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.bar {
+  border-radius: 5px;
+  width: 75%;
+  height: 100%;
+  background-color: var(--primary);
+  transition: 0.2s all ease-in-out;
+}
+
+.bar:hover {
+  opacity: 60%;
+}
+
+.graph-titles {
+  display: flex;
+  justify-content: space-around;
+}
+
+.highest {
+  background-color: var(--secondary);
+}
+
+/* Statistic Section */
+
+.statistics {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+/* Attribution Section */
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
