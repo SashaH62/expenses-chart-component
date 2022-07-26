@@ -10,11 +10,11 @@
   --background: hsl(27, 66%, 92%);
   --primary: hsl(10, 79%, 65%);
   --secondary: hsl(186, 34%, 60%);
+  --font: hsl(25, 47%, 15%);
 }
 
 body {
   background: var(--background);
-  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -22,19 +22,35 @@ body {
   font-family: "DM Sans";
 }
 
-/* Class */
+main {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  color: var(--font);
+  line-height: 1;
+}
 
 /* Main card */
 
 .main-card {
   width: calc(100% - 50px);
-  max-width: 600px;
+  max-width: 500px;
 }
 
 .upper,
 .lower {
-  border-radius: 15px;
-  padding: 40px;
+  border-radius: 20px;
+  width: 100%;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 0px 25px -6px;
 }
 
 /* Upper Card */
@@ -42,28 +58,43 @@ body {
 .upper {
   background-color: var(--primary);
   margin-bottom: 25px;
-  color: #fff;
+  color: var(--background);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 35px;
 }
 
-.upper .sub-titles {
-  color: var(--background);
+.sub-titles {
+  font-size: 14px;
+}
+
+.sub-titles:not(:last-child) {
   margin-bottom: 5px;
 }
 
-.upper h3 {
+.balance {
   font-size: 30px;
   font-weight: 700;
+  color: hsl(33, 100%, 98%);
+}
+
+@media (max-width: 480px) {
+  .balance {
+    font-size: 1.625rem;
+  }
 }
 
 /* Lower Card */
 
 .lower {
-  background-color: #fff;
+  background-color: hsl(33, 100%, 98%);
+  padding: 35px;
 }
 
 .title {
   font-weight: 700;
-  font-size: 32px;
+  font-size: 30px;
   margin-bottom: 25px;
 }
 
@@ -72,11 +103,10 @@ body {
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
-  margin-bottom: 50px;
 }
 
 .graph-bar-section {
-  width: 15%;
+  width: calc(14.25% - 15px);
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -85,14 +115,29 @@ body {
 
 .cost-display {
   text-align: center;
-  width: calc(100% - 5px);
   padding: 7.25px;
   color: #fff;
-  background-color: hsl(25, 47%, 15%);
+  background-color: var(--font);
   margin-bottom: 10px;
   border-radius: 5px;
   opacity: 0;
   transition: 0.2s all ease-in-out;
+}
+
+@media (max-width: 480px) {
+  .lower,
+  .upper {
+    padding: 35px 25px;
+  }
+
+  .graph-bar-section {
+    width: calc(14.25% - 10px);
+  }
+
+  .cost-display {
+    padding: 5px;
+    font-size: 12px;
+  }
 }
 
 .bar-container {
@@ -104,8 +149,9 @@ body {
 
 .bar {
   border-radius: 5px;
-  width: 75%;
+  width: 100%;
   height: 100%;
+  margin-bottom: 5px;
   background-color: var(--primary);
   transition: 0.2s all ease-in-out;
 }
@@ -114,9 +160,10 @@ body {
   opacity: 60%;
 }
 
-.graph-titles {
-  display: flex;
-  justify-content: space-around;
+.day-title {
+  font-size: 13px;
+  font-weight: 400;
+  color: var(--font);
 }
 
 .highest {
@@ -125,10 +172,48 @@ body {
 
 /* Statistic Section */
 
+.divider {
+  height: 2px;
+  width: 100%;
+  margin: 30px 0;
+  border: none;
+  background: var(--background);
+}
+
 .statistics {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
+}
+
+.statistics .sub-titles {
+  color: hsl(28, 10%, 53%);
+  text-align: right;
+}
+
+.sub-titles.total-month {
+  text-align: left;
+}
+
+.total-spent {
+  font-size: 2.75rem;
+  text-align: left;
+}
+
+.comparison-section h6 {
+  font-size: 1.125rem;
+  text-align: right;
+}
+
+@media (max-width: 480px) {
+  .total-spent {
+    font-size: 2rem;
+  }
+
+  .sub-titles,
+  .comparison-section h6 {
+    font-size: 1rem;
+  }
 }
 
 /* Attribution Section */

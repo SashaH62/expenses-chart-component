@@ -31,8 +31,11 @@
   <body>
     <main class="main-card">
       <div class="upper">
-        <p class="sub-titles">My balance</p>
-        <h3>$921.48</h3>
+        <div class="col">
+          <p class="sub-titles">My balance</p>
+          <h3 class="balance">$921.48</h3>
+        </div>
+        <img src="./images/logo.svg" alt="" />
       </div>
       <div class="lower">
         <h2 class="title">Spending - Last 7 days</h2>
@@ -102,25 +105,26 @@
             <h6 class="day-title">sun</h6>
           </div>
         </div>
-        <hr />
+        <div class="divider"></div>
         <div class="statistics">
           <div class="total-section">
-            <p class="sub-titles">Total this month</p>
+            <p class="sub-titles total-month">Total this month</p>
             <h2 class="total-spent">$478.33</h2>
           </div>
           <div class="comparison-section">
             <h6>+2.4%</h6>
-            <p>from last month</p>
+            <p class="sub-titles">from last month</p>
           </div>
         </div>
       </div>
     </main>
-
-    <div class="attribution">
-      Challenge by
-      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-        >Frontend Mentor</a
-      >. Coded by <a href="#">Your Name Here</a>.
-    </div>
+    <footer>
+      <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="#">Your Name Here</a>.
+      </div>
+    </footer>
   </body>
 </html>
