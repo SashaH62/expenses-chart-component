@@ -1,7 +1,9 @@
 "use strict";
 
 //Import Json file
-import weeklyCost from "https://sashah62.github.io/expenses-chart-component/data.json" assert { type: "json" };
+import weeklyCost from "./data.json" assert { type: "json" };
+
+console.log(weeklyCost)
 
 // Assign all elements to variables
 const graphColumns = document.querySelectorAll(".graph-bar-section");
