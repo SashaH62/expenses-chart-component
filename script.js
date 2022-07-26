@@ -4,8 +4,6 @@
 // const response = await fetch(urlOrRequest[, options])
 // import weeklyCost from "./data.json" assert { type: "json" };
 
-console.log(weeklyCost)
-
 // Assign all elements to variables
 const graphColumns = document.querySelectorAll(".graph-bar-section");
 const graphBarsContainers = document.querySelectorAll(".bar-container");
